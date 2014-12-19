@@ -1,0 +1,10 @@
+---
+
+- include_vars: user_accounts/jeff.yml
+
+- name: TESTING - print username and private key
+  debug: var={{ item }}
+  with_items:
+    - username
+    - private
+
