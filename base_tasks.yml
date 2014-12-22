@@ -1,0 +1,15 @@
+---
+- hosts: all
+  user: root
+
+  tasks:
+
+    - include_vars: group_vars/all
+  
+# testing loops
+
+    - name: display vars
+      debug: msg="the username is {{ item.username }} and the SSH key is {{ lookup('file', item.public_keys) }}"
+      with_items: users
+
+

@@ -1,0 +1,17 @@
+---
+
+users:
+
+  - username: jeff
+    public_keys:
+      - pub_keys/jeff.pub
+      - pub_keys/jeff2.pub
+
+  - username: mary
+    public_keys:
+      - pub_keys/mary.pub
+
+  - username: peter
+    public_keys:
+      - pub_keys/peter.pub
+
