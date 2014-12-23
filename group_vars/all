@@ -2,16 +2,29 @@
 
 users:
 
-  - username: jeff
-    public_keys:
-      - pub_keys/jeff.pub
-      - pub_keys/jeff2.pub
+  jeff:
+    public_keys: pub_keys/jeff.pub
+    password: '$6$OMJPCfmD$iPFT.VsRLtjtVn.A2EHP1APQ5h3/yKhJ1Q0Zta.YSQrsamr1gpgRodM/8iHBq647dNCMYE1Kg26.NLdP.1FrG/'
+    shell: '/bin/bash'
+    groups: sudo,jeff
 
-  - username: mary
-    public_keys:
-      - pub_keys/mary.pub
+  mary:
+    public_keys: pub_keys/mary.pub
+    password: '$6$OMJPCfmD$iPFT.VsRLtjtVn.A2EHP1APQ5h3/yKhJ1Q0Zta.YSQrsamr1gpgRodM/8iHBq647dNCMYE1Kg26.NLdP.1FrG/'
+    shell: '/bin/bash'
+    groups: sudo,mary
 
-  - username: peter
-    public_keys:
-      - pub_keys/peter.pub
+  peter:
+    public_keys: pub_keys/peter.pub
+    password: '$6$OMJPCfmD$iPFT.VsRLtjtVn.A2EHP1APQ5h3/yKhJ1Q0Zta.YSQrsamr1gpgRodM/8iHBq647dNCMYE1Kg26.NLdP.1FrG/'
+    shell: '/bin/bash'
+    groups: sudo,peter
+
+
+
+removed:
+  - alex
+  - frank
+  - sam
+
 

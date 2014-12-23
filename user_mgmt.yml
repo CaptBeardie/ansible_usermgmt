@@ -2,7 +2,25 @@
 - hosts: all
   user: root
 
+  tasks:
 
-  roles:
-  - user_accounts
+    - include_vars: group_vars/all
+  
+    - name: Add system accounts
+      user: name={{ item.key }} password={{ item.value.password }} shell={{ item.value.shell }} groups="{{ item.value.groups }}"  state=present
+      with_dict: users 
+
+    - name: Ensure old accounts are removed
+      user: name={{ item }} state=absent
+      with_items: removed
+
+    - name: Clean authorized keys
+      file: path='/home/{{ item.key }}/.ssh/authorized_keys' state=absent
+      with_dict: users
+
+### You can add multiple pubkeys to the same .pub file ###
+    - name: Set user's public ssh-keys
+      authorized_key: user={{ item.key }} key='{{ lookup('file', item.value.public_keys) }}'
+      with_dict: users
+
 
