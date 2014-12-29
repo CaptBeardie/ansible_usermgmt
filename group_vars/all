@@ -3,22 +3,22 @@
 users:
 
   jeff:
-    public_keys: pub_keys/jeff.pub
+    public_key_file: pub_keys/jeff.pub
     password: '$6$OMJPCfmD$iPFT.VsRLtjtVn.A2EHP1APQ5h3/yKhJ1Q0Zta.YSQrsamr1gpgRodM/8iHBq647dNCMYE1Kg26.NLdP.1FrG/'
     shell: '/bin/bash'
-    groups: sudo,jeff
+    groups: sudo
 
   mary:
-    public_keys: pub_keys/mary.pub
+    public_key_file: pub_keys/mary.pub
     password: '$6$OMJPCfmD$iPFT.VsRLtjtVn.A2EHP1APQ5h3/yKhJ1Q0Zta.YSQrsamr1gpgRodM/8iHBq647dNCMYE1Kg26.NLdP.1FrG/'
     shell: '/bin/bash'
-    groups: sudo,mary
+    groups: sudo
 
   peter:
-    public_keys: pub_keys/peter.pub
+    public_key_file: pub_keys/peter.pub
     password: '$6$OMJPCfmD$iPFT.VsRLtjtVn.A2EHP1APQ5h3/yKhJ1Q0Zta.YSQrsamr1gpgRodM/8iHBq647dNCMYE1Kg26.NLdP.1FrG/'
     shell: '/bin/bash'
-    groups: sudo,peter
+    groups: sudo
 
 
 

@@ -20,7 +20,7 @@
 
 ### You can add multiple pubkeys to the same .pub file ###
     - name: Set user's public ssh-keys
-      authorized_key: user={{ item.key }} key='{{ lookup('file', item.value.public_keys) }}'
+      authorized_key: user={{ item.key }} key='{{ lookup('file', item.value.public_key_file) }}'
       with_dict: users
 
 
